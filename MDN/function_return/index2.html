@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse a number</title>
+    <style>
+        input {
+            font-size: medium;
+            font-weight: 600;
+            margin: 20px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <label for="input">Введиче число, которое нужно записать наоборот:</label><br>
+    <input type="text" class="input">
+    <button class="btn">Reverse</button>
+    <p></p>
+    <script>
+        
+        var btn = document.querySelector('button');
+        var para = document.querySelector('p');
+            
+
+        function numberReverser(num) {
+
+            return num.toString()
+            .split('')
+            .reverse()
+            .join('');
+        }
+            
+        
+        btn.onclick = function () {
+            var input = document.querySelector('.input');
+            para.textContent = numberReverser(input?.value);
+        }
+    </script>
+</body>
+</html>

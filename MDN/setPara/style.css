@@ -1,0 +1,21 @@
+.content {
+
+    display: flex;
+    flex-direction: column;
+
+    /* justify-content: center; */
+    align-items: center;
+}
+
+
+.para {
+
+    background-color: aqua;
+    height: 50px;
+    /* text-align: center; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

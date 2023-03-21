@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function library example</title>
+  <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+  </style>
+  </head>
+<body>
+
+  <input class="numberInput" type="text">
+  <p></p>
+
+  <script>
+    const input = document.querySelector('.numberInput');
+    const para = document.querySelector('p');
+
+    function squareRoot(num) {
+        var sqrt = Math.sqrt(num);
+  return sqrt.toFixed(2);
+}
+
+function cubedRoot(num) {
+    var cbrt = Math.cbrt(num);
+  return cbrt.toFixed(2);
+}
+
+function circleLengt(num) {
+  var x = Math.PI * 2 * num;
+  
+  return x.toFixed(2);
+}
+input.onchange = function() {
+  var num = input.value;
+  if (isNaN(num)) {
+    para.textContent = 'You need to enter a number!';
+  } else {
+    para.textContent = num + ' squareRoot is ' + squareRoot(num) + '. ' +
+                       num + ' cubedRoot is ' + cubedRoot(num) + '. ' +
+                       num + ' circleLength is ' + circleLengt(num) + '.';
+  }
+}
+
+
+  </script>
+</body>
+</html>
